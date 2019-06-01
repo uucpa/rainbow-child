@@ -1,0 +1,186 @@
+/*
+ Theme Name:   Rainbow
+ Theme URI:    http://uucpa.dreamhosters.com/wp-content/themes/rainbow-child/
+ Description:  Rainbow Child Theme
+ Author:       Eric Bier
+ Author URI:   http://uucpa.dreamhosters.com
+ Template:     uua-congregation
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         uucpa, 2015
+ Text Domain:  rainbow-child
+*/
+
+body.aqua-green .content-info {
+  background-color: #bbbd98;
+  color: #000000;
+}
+
+body.aqua-green .content-info a {
+  color: #000000;
+}
+
+body.aqua-green .content-info .footer-widgets .affiliation-logos .uua-flag {
+  width: 174px;
+  height: 84px;
+}
+
+body.aqua-green .content-info .footer-widgets .affiliation-logos {
+  text-align: right;
+}
+
+body.grey-red {
+}
+
+body.aqua-green {
+	background: white;
+}
+
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2525 >  a {
+}
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2695 >  a {
+  background-color: #cd5a2b;
+}
+body.aqua-green .navbar-default .navbar-nav > :not(.active).menu-item-2695 > a {
+  background-color: #cd5a2b;
+}
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2404 >  a {
+  background-color: #781e20;
+}
+body.aqua-green .navbar-default .navbar-nav > :not(.active).menu-item-2404 > a {
+  background-color: #781e20;
+}
+
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2406 >  a {
+  background-color: #787c32;
+}
+body.aqua-green .navbar-default .navbar-nav > :not(.active).menu-item-2406 > a {
+  background-color: #787c32;
+}
+
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2408 >  a {
+  background-color: #10562e;
+}
+body.aqua-green .navbar-default .navbar-nav > :not(.active).menu-item-2408 > a {
+  background-color: #10562e;
+}
+
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2407 >  a {
+  background-color: #45587F;
+}
+body.aqua-green .navbar-default .navbar-nav > :not(.active).menu-item-2407 > a {
+  background-color: #45587F;
+}
+
+body.aqua-green .navbar-default .navbar-nav > .active.menu-item-2411 >  a {
+  background-color: #1482B5;
+}
+body.aqua-green .navbar-default .navbar-nav > :not(.active).menu-item-2411 > a {
+  background-color: #1482B5;
+}
+
+body.aqua-green .nav.nav-pills > li.menu-item-4685 > a,
+body.aqua-green .nav.nav-pills > li.menu-item-2399 > a,
+body.aqua-green .nav.nav-pills > li.menu-item-2400 > a,
+body.aqua-green .nav.nav-pills > li.menu-item-2523 > a,
+body.aqua-green .nav.nav-pills > li.menu-item-2524 > a
+{
+  color: #000000;
+}
+
+.masthead-header {
+	background: #cbd0e7;
+}
+
+.logo-area {
+  margin-top: 4px;
+}
+
+.navbar-brand .site-title h1 {
+	color: black;
+}
+
+.navbar-brand .site-title { /* mobile devices */
+  position: relative;
+  top: 0px;
+}
+
+.navbar-brand .site-title h1 { /* mobile devices */
+  margin-left: 63px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+.header-right .social-media-links { /* mobile devices */
+  margin-top:3px;
+  margin-bottom:3px;
+}
+
+.header-right .menu-utility-menu-container .menu-item { /* mobile devices */
+  margin-left: 0px;
+  font-size: 9px;
+}
+
+.header-text-field {
+  margin-top: 6px;
+}
+
+.header-text-field h4 {
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+.carousel .carousel-caption h4 {
+  padding-top: 3px;
+  line-height: 110%;
+}
+
+.upcomingservice_widget {
+  padding-top: 4px;
+}
+
+@media only screen and (min-width: 768px) { /* larger screens */
+  .navbar-brand .site-title {
+    position: relative;
+    top: 0px;
+  }
+
+  .navbar-brand .site-title h1 { /* larger screens */
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .navbar-brand .site-title { /* larger screens */
+    margin-left: 93px;
+  }
+
+  .header-right .social-media-links { /* larger screens */
+    margin-top:4px;
+    margin-bottom: 4px;
+  }
+
+  .header-right .menu-utility-menu-container .menu-item { /* mobile devices */
+    margin-left: 2px;
+    font-size: 11.5px;
+  }
+
+  .header-text-field h4 {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+
+  .carousel .carousel-caption h4 {
+    padding-top: 10px;
+    line-height: 130%;
+  }
+
+  .upcomingservice_widget {
+    padding-top: 20px;
+  }
+}
+
+
