@@ -11,6 +11,16 @@
  Tags:         uucpa, 2015
  Text Domain:  rainbow-child
 */
+span.fc-title {
+            padding: 5px !important;
+                text-overflow: ellipsis !important;
+                    white-space: pre-line;
+            }
+            .fc-day-grid-event .fc-content {
+                    white-space: pre-wrap;
+                    overflow: hidden;
+            }
+
 
 body.aqua-green .content-info {
   background-color: #bbbd98;

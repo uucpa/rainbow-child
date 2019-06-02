@@ -3,17 +3,20 @@
  * RSS Page
  * This page handles the UUA services RSS feed.
  * 
+* <pubDate><?php echo uua_get_the_service_date('D, d M Y H:i:s +0000'); ?></pubDate>
+* <pubDate><?php echo date('D, d M Y H:i:s +0000'); ?></pubDate> 
+* <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
  */ 
 header ( "Content-type: application/rss+xml; charset=UTF-8" );
 echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
 ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
 	<channel>
 		<title><?php echo esc_html(get_option('blogname')." Upcoming Worship Services"); ?></title>
-		<link><?php echo get_option('siteurl'); ?></link>
+		<link><?php echo get_option('siteurl')."/worship/upcoming-worship-services/"; ?></link>
 		<description><?php echo esc_html(get_option('blogdescription')." - Upcoming Worship Services"); ?></description>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
-		<pubDate><?php echo date('D, d M Y H:i:s +0000'); ?></pubDate>
+		<pubDate><?php echo date('D, d M Y H:i:s +0000'); ?></pubDate> 
 		<atom:link href="<?php echo esc_attr(get_option('siteurl')."/worship/upcoming-worship-services/"); ?>" rel="self" type="application/rss+xml" />
 		<?php
         $rss_limit = 5;
@@ -45,8 +48,14 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
 					<title><?php echo the_title(); ?></title>
                                         <link><?php echo the_permalink(); ?></link>
                                         <guid><?php echo the_permalink(); ?></guid>
-                                        <pubDate><?php echo uua_get_the_service_date('D, d M Y H:i:s +0000'); ?></pubDate>
-                                <description><![CDATA[
+					<pubDate><?php echo uua_get_the_service_date('D, d M Y H:i:s +0000'); ?></pubDate>
+               <description>
+<?php
+               echo strip_tags(uua_service_datetime());
+?>
+               </description>
+               <content:encoded>
+		<![CDATA[
 <?php
 		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 			echo '<figure class="wp-block-image">';
@@ -63,7 +72,15 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
                 echo '<em>'.uua_service_datetime().'</em>';
 		ent2ncr(convert_chars(the_content()));
 ?>
-               </div>]]></description>
+               	</div>]]>
+		</content:encoded>
+<?php
+		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+			echo '<media:content url="';
+			the_post_thumbnail_url('medium_large');
+			echo '" medium="image"/>'; 
+		}
+?>                              
 
 	</item>
 	<?php
